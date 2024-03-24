@@ -1,0 +1,9 @@
+insertion 5 failed: can not find location
+deletion 9 failed: node is not in the list
+finding 3 failed : node is not in the list
+previous node of 7 is head
+previous node of 2 is 7
+7 2 4 
+insertion 7 failed: can not find location
+insertion 7 failed: the key already exists
+empty list

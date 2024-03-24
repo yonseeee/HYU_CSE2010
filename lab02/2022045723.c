@@ -23,11 +23,11 @@ void Insert(LE* header, int inserted_key, int target_key){
     LE *target=Find(header,target_key);// Find로 target_key 노드 찾기
     
     if((target==NULL)&&(target_key!=-1)) //현재 linkedlist에 target_key가 없는지 확인, target_key가 -1일 경우 header 뒤에 insert해야하므로 따로 처리
-    {   printf("insertion %d failed: can not find location\n", inserted_key);
+    {   fprintf(fout, "insertion %d failed: can not find location\n", inserted_key);
         return;
     }
     if(Find(header, inserted_key)!=NULL){//현재 linkedlist에 inserted_key가 이미 있는지 확인
-        printf("insertion %d failed: the key already exists\n", inserted_key);
+        fprintf(fout, "insertion %d failed: the key already exists\n", inserted_key);
         return;
     }
     //위 조건문 2개로 예외 상황 처리 완료
@@ -47,7 +47,7 @@ void Insert(LE* header, int inserted_key, int target_key){
 
 void Delete(LE* header, int target_key){
     if(Find(header, target_key)==NULL){//target_key가 linkedlist에 없을 때
-        printf("deletion %d failed: node is not in the list\n", target_key);
+        fprintf(fout, "deletion %d failed: node is not in the list\n", target_key);
         return;
     }
     LE *previous=FindPrevious(header,target_key);// FindPrevious를 통해 target_key의 직전 노드를 찾기
@@ -85,23 +85,23 @@ LE* FindPrevious(LE* header, int target_key){
 void PrintPrevious(LE* header, int target_key){
     LE *previous=FindPrevious(header,target_key);//FindPrevious를 사용하여 target의 직전 노드 찾기
     if(previous==NULL)//target의 직전 노드 못 찾은 경우
-    printf("finding %d failed : node is not in the list\n", target_key);
+    fprintf(fout, "finding %d failed : node is not in the list\n", target_key);
     else{//직전 노드 찾은 경우
         if(previous==header)//그 직전 노드가 header인 경우
-        printf("previous node of %d is head\n", target_key);
-        else printf("previous node of %d is %d\n", target_key, previous->key);//그 직전 노드가 header가 아닌 경우
+        fprintf(fout, "previous node of %d is head\n", target_key);
+        else fprintf(fout, "previous node of %d is %d\n", target_key, previous->key);//그 직전 노드가 header가 아닌 경우
      }
 }
 
 void PrintList(LE* header){
     LE *current=header;//포인터 current를 header로 설정
-    if(header->next_pointer==NULL) printf("empty list\n");//linkedlist가 비어있는 경우
+    if(header->next_pointer==NULL) fprintf(fout, "empty list\n");//linkedlist가 비어있는 경우
     else{//linkedlist가 비어있지 않은 경우
         while(current->next_pointer!=NULL){//current의 next_pointer가 NULL이 아닌지 확인
             current=current->next_pointer;//current를 current의 next_pointer로 설정
-         printf("%d ", current->key);//current의 key 출력
+         fprintf(fout, "%d ", current->key);//current의 key 출력
         }
-    printf("\n");//개행
+    fprintf(fout, "\n");//개행
     }
 }
 
