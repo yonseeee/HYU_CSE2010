@@ -1,0 +1,2 @@
+top numbers : 7 3 8 4 0 3 10 2 6 9 -3 9 2 7 0 
+error : invalid postfix expression, divide by zero
