@@ -1,6 +1,0 @@
-1 7 9 10 
-deletion error 12
-1 2 4 5 7 9 
-10 is not in the tree
-9 is in the tree
-1 2 4 5 7 9 32 
