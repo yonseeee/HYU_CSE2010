@@ -1,0 +1,54 @@
+d 5
+i 1
+i 2
+f 7
+pi
+d 4
+i 3
+f 1
+i 5
+d 3
+pi
+pi
+f 2
+i 10
+i 9
+pi
+i 32
+d 2
+d 10
+pi
+f 9
+i 113
+i 18
+i 23
+pi
+d 18
+f 23
+f 18
+pi
+i 231
+pi
+i 29
+d 21
+i 33
+f 23
+f 20
+pi
+i 44
+i 66
+i 77
+d 8
+d 9
+f 4
+pi
+i 28
+f 7
+pi
+f 30
+f 31
+d 31
+d 30
+i 310 
+pi
+
